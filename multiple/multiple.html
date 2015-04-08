@@ -32,16 +32,36 @@
 <body>
 
 
-        <div class="active">
-                <div class="box animate"></div>
+        <div  id="content">
+
+                <div class="translate  ib animate">
+                    <div class="rotate ib animate">
+                        <div class="lessen ib animate">
+                            <div class="fadeOut ib animate">
+                                    <div class="box"></div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+
         </div>
 
 
+        <button class="btn btn-primary" id="startAni">开启动画</button>
 
 
 
 </body>
 
 <script type="text/javascript">
+     var startAni = document.querySelector("#startAni");
+     var content = document.querySelector("#content");
+     startAni.addEventListener("click",function(){
+         content.classList.remove("active");
+         setTimeout(function(){
+             content.classList.add("active");
+         },1000);
+
+     },false);
 </script>
 </html>

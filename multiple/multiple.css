@@ -1,11 +1,54 @@
-.box {
-  width: 100px;
-  height: 100px;
-  background: skyblue;
-  border-radius: 5px;
-  -webkit-animation: slideRight 1s ease 0s forwards, rotate360 1s linear  1s forwards, fadeOut 0.8s ease 2s forwards; }
-
+@charset "UTF-8";
+/**
+ * sherlock221b
+ * 动画部分常用
+ */
+@-webkit-keyframes lessen {
+  0% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.5); } }
+@-moz-keyframes lessen {
+  0% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.5); } }
+@-o-keyframes lessen {
+  0% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.5); } }
+@-ms-keyframes lessen {
+  0% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.5); } }
+@keyframes lessen {
+  0% {
+    -webkit-transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.5); } }
 @-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fadeOut {
   0% {
     opacity: 1; }
   100% {
@@ -15,17 +58,114 @@
     -webkit-transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(360deg); } }
+@-moz-keyframes rotate360 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@-o-keyframes rotate360 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@-ms-keyframes rotate360 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes rotate360 {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
 @-webkit-keyframes slideRight {
   0% {
     -webkit-transform: translate(0); }
   100% {
     -webkit-transform: translate(200px); } }
+@-moz-keyframes slideRight {
+  0% {
+    -webkit-transform: translate(0); }
+  100% {
+    -webkit-transform: translate(200px); } }
+@-o-keyframes slideRight {
+  0% {
+    -webkit-transform: translate(0); }
+  100% {
+    -webkit-transform: translate(200px); } }
+@-ms-keyframes slideRight {
+  0% {
+    -webkit-transform: translate(0); }
+  100% {
+    -webkit-transform: translate(200px); } }
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translate(0); }
+  100% {
+    -webkit-transform: translate(200px); } }
+.box {
+  width: 100px;
+  height: 100px;
+  background: skyblue;
+  border-radius: 5px; }
+
+.btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  outline: none; }
+
+.btn-primary {
+  background: tomato;
+  color: white;
+  font-size: 16px;
+  opacity: 0.9; }
+  .btn-primary:active {
+    opacity: 1; }
+
+.ib {
+  display: inline-block; }
+
 .animate {
-  animation-play-state: paused;
-  -webkit-animation-play-state: paused; }
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important; }
 
 .active .animate {
-  -webkit-animation-play-state: running;
-  animation-play-state: running; }
+  -webkit-animation-play-state: running !important;
+  animation-play-state: running !important; }
+
+.translate {
+  -webkit-animation: slideRight 1s ease 0s both;
+  -ms-animation: slideRight 1s ease 0s both;
+  -moz-animation: slideRight 1s ease 0s both;
+  -o-animation: slideRight 1s ease 0s both;
+  animation: slideRight 1s ease 0s both; }
+
+.rotate {
+  -webkit-animation: rotate360 1s linear 0.8s both;
+  -ms-animation: rotate360 1s linear 0.8s both;
+  -moz-animation: rotate360 1s linear 0.8s both;
+  -o-animation: rotate360 1s linear 0.8s both;
+  animation: rotate360 1s linear 0.8s both; }
+
+.lessen {
+  -webkit-animation: lessen 1s ease 1.8s both;
+  -ms-animation: lessen 1s ease 1.8s both;
+  -moz-animation: lessen 1s ease 1.8s both;
+  -o-animation: lessen 1s ease 1.8s both;
+  animation: lessen 1s ease 1.8s both; }
+
+.fadeOut {
+  -webkit-animation: fadeOut 1s ease 2.8s both;
+  -ms-animation: fadeOut 1s ease 2.8s both;
+  -moz-animation: fadeOut 1s ease 2.8s both;
+  -o-animation: fadeOut 1s ease 2.8s both;
+  animation: fadeOut 1s ease 2.8s both; }
 
 /*# sourceMappingURL=multiple.css.map */

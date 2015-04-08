@@ -1,61 +1,69 @@
 @charset "utf-8";
 
+@import "../fun/animation";
+@import "keyframe";
+
 .box{
   width: 100px;
   height: 100px;
   background: skyblue;
   border-radius: 5px;
-
-
-  -webkit-animation : slideRight 1s ease 0s forwards,
-                      rotate360 1s linear  1s forwards,
-                fadeOut 0.8s ease 2s forwards;
-
-
 }
 
+.btn{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
 
-@-webkit-keyframes fadeOut{
+.btn-primary{
+  background: tomato;
+  color: white;
+  font-size: 16px;
+  opacity: 0.9;
 
-  0%{
+  &:active{
     opacity: 1;
   }
-
-  100%{
-    opacity: 0;
-  }
 }
 
-@-webkit-keyframes rotate360{
-
-  0%{
-    -webkit-transform : rotate(0deg);
-  }
-
-  100%{
-    -webkit-transform : rotate(360deg);
-  }
+.ib{
+  display: inline-block;
 }
-
-
-@-webkit-keyframes slideRight{
-
-  0%{
-    -webkit-transform : translate(0);
-  }
-
-  100%{
-    -webkit-transform : translate(200px);
-  }
-}
-
-
-
-.animate {
-  animation-play-state: paused;
-  -webkit-animation-play-state: paused;
+.animate{
+  -webkit-animation-play-state:paused !important;
+  animation-play-state:paused !important;
 }
 .active .animate {
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
+  -webkit-animation-play-state:running !important;
+  animation-play-state:running !important;
 }
+
+//移动
+.translate{
+  @include animation(slideRight 1s ease 0s both);
+}
+//旋转
+.rotate{
+  @include animation(rotate360 1s linear  0.8s  both);
+}
+//缩放
+.lessen{
+  @include animation(lessen 1s ease  1.8s both);
+}
+//渐隐
+.fadeOut{
+  @include animation(fadeOut 1s ease  2.8s both);
+}
+
+
+
+
+
